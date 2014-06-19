@@ -1,4 +1,4 @@
-apache:
+nginx:
   pkg.installed:
-    - name: www-servers/apache
+    - name: www-servers/nginx
 
