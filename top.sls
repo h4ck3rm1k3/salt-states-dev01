@@ -1,8 +1,11 @@
 base:
   '*':
     {% if grains['id'].split('.')[-2] == 'architechs' %}
-    include:
-      - dev
+    - nnn
     {% else %}
     - {{ grains['id'].split('.')[-2] }}
     {% endif %}
+dev:
+  '*':
+    include:
+      - dev
