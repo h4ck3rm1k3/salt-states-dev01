@@ -5,6 +5,3 @@ base:
     {% else %}
     - {{ grains['id'].split('.')[-2] }}
     {% endif %}
-dev:
-  '*':
-    - dev
