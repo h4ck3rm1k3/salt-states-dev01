@@ -39,7 +39,7 @@ def check_chain(table='filter', chain=None, family='ipv4'):
         return 'Error: Chain needs to be specified'
 
     cmd = '{0}-save -t {1}'.format(_iptables_cmd(family), table)
-    out = __salt__['cmd.run'](cmd).find(':{1} '.format(table, chain))
+    out = __salt__['cmd.run'](cmd).find(':{1} '.format(chain))
 
     if out != -1:
         out = True
